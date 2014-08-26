@@ -13,6 +13,7 @@ public final class ChatMain extends Application {
     public void start(Stage primaryStage) throws Exception {
         FXMLLoader2.setResourcePath("resources");
         BorderPane mainPane = new BorderPane();
+        ChatLoginController.setSectionForChat(mainPane);
 
         Node chat = ChatArea.create();
         mainPane.setCenter(chat);
@@ -21,7 +22,7 @@ public final class ChatMain extends Application {
         primaryStage.setScene(s);
         primaryStage.show();
     }
-    
+
     public static void main(String[] args) {
         launch(args);
     }
